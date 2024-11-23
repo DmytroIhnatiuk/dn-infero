@@ -1,0 +1,35 @@
+@use 'sass:math';
+@import 'tailwind';
+@import 'base';
+@import 'fonts';
+@import 'global';
+@import 'helpers';
+@import 'components';
+
+.dn-promo-video {
+	&:hover {
+		button {
+			svg {
+				fill: #c14312;
+			}
+		}
+	}
+}
+.dn-bread-crumbs {
+	a {
+		&:last-child {
+			margin-right: 0;
+			&::before {
+				content: '';
+			}
+		}
+		&::before {
+			content: '>';
+			position: absolute;
+			right: -0.2rem;
+		}
+		&.active {
+			pointer-events: none;
+		}
+	}
+}

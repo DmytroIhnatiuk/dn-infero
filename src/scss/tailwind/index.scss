@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.dn-hover-color {
+		@apply transition-colors duration-[.35s]  lg:hover:text-[#9d0128];
+	}
+}

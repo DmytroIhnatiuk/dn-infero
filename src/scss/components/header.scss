@@ -1,0 +1,116 @@
+.dn-header {
+	&__main {
+		&.active {
+			.dn-menu {
+				transform: translateX(-100%);
+			}
+		}
+		.image {
+			img {
+				object-fit: contain;
+			}
+		}
+		.dn-menu {
+			height: calc(100svh - 110px);
+			@media all and (min-width: 1024px) {
+				height: auto;
+			}
+			&__links {
+				.dn-accordion {
+					&:hover {
+						.dn-accordion-content {
+							max-height: 550px;
+						}
+					}
+
+					.dn-accordion-content {
+						@media all and (min-width: 1024px) {
+							box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.16);
+							left: size(54, 18);
+							right: size(54, 18);
+						}
+					}
+				}
+			}
+
+			.btn_red {
+				height: 45px;
+				min-height: 45px;
+				background: #c14312;
+				color: #fff;
+				font-size: 18px;
+				position: relative;
+				margin: 0 25px;
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					transition: background 0.35s linear;
+					background: #9d0128;
+				}
+				span {
+					position: relative;
+					z-index: 10;
+				}
+				@media all and (min-width: 640px) {
+					margin: 0 auto;
+					width: auto;
+					min-width: 20%;
+					max-width: 360px;
+					font-size: 18px;
+				}
+				@media all and (min-width: 1024px) {
+					margin: 0;
+					font-size: 18px;
+					&:hover {
+						&::before {
+							background: transparent;
+						}
+					}
+				}
+			}
+		}
+	}
+	&__container {
+		padding: 0 size(54, 18);
+	}
+}
+
+.dn-accordion {
+	&-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		cursor: pointer;
+		@media all and (min-width: 640px) {
+			justify-content: center;
+		}
+
+		span {
+			width: 0;
+			height: 0;
+			border-left: 15px solid transparent;
+			border-right: 15px solid transparent;
+			border-top: 15px solid #333;
+			transition: transform 0.35s linear;
+			margin-left: 24px;
+			@media all and (min-width: 1024px) {
+				display: none;
+			}
+		}
+
+		&.active {
+			span {
+				transform: scale(1, -1);
+			}
+		}
+	}
+	&-content {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.35s ease 0.25s;
+	}
+}

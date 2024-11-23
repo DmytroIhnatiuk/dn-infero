@@ -1,0 +1,27 @@
+.dn-btn-main {
+	background: #9d0128;
+	color: #fff;
+	font-size: 0.16rem;
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		transition: background 0.35s linear;
+		background: #c14312;
+	}
+	span {
+		position: relative;
+		z-index: 10;
+	}
+	@media all and (min-width: 1024px) {
+		&:hover {
+			&::before {
+				background: transparent;
+			}
+		}
+	}
+}
