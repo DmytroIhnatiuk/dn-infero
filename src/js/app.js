@@ -45,9 +45,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (window.innerWidth < 1024) {
             conditionsSlider();
         }
-        HeaderComponent()
         scrollToAnchor()
-        headerFixed()
         burger()
     } catch (e) {
         console.log(e)

@@ -39,7 +39,7 @@ html {
 body {
 	font-family: 'DM Sans';
 	margin: 0;
-	font-size: .16rem;
+	font-size: .18rem;
 	line-height: normal;
 	font-weight: 400;
 	position: relative;
@@ -137,10 +137,7 @@ footer {
 	flex-shrink: 0;
 }
 
-::-webkit-scrollbar {
-	width: 0;
-	height: 0;
-}
+
 
 .icon {
 	width: 100%;
