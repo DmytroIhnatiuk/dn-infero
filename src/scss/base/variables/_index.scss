@@ -8,7 +8,7 @@ $minWidth: 320;
 	// Base (глобальні змінні)
 	--header-height: #{gem(96)};
 	--header-height-decrement: #{gem(-96)};
-	--container-gap: #{gem(40)};
+	//--container-gap: #{gem(40)};
 	--container-gap-decrement: #{gem(-40)};
 	--section-padding: #{gem(70)};
 	--section-padding-decrement: #{gem(-70)};
@@ -17,7 +17,7 @@ $minWidth: 320;
 @media all and (min-width: 1024px) {
 	:root {
 		--sidebar-width: 3.2rem;
-		--container-gap: #{gem(24)};
+		//--container-gap: #{gem(24)};
 		--section-padding: #{gem(50)};
 		--section-padding-decrement: #{gem(-50)};
 	}
@@ -25,7 +25,7 @@ $minWidth: 320;
 
 @media all and (min-width: 640px) {
 	:root {
-		--container-gap: #{gem(16)};
+		//--container-gap: #{gem(16)};
 		--container-gap-decrement: #{gem(-16)};
 		--header-height: #{gem(108)};
 		--header-height-decrement: #{gem(-108)};

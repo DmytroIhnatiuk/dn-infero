@@ -1,0 +1,134 @@
+@use "sass:math";
+@import "base";
+@import "global";
+@import "helpers";
+@import "components";
+@import "pages";
+@import "pages/detailes.scss";
+@import "pages/courses.scss";
+@import "pages/officepage.scss";
+@import "pages/fourth.scss";
+@import "pages/form.scss";
+@import "pages/contact-us.scss";
+
+.features.link-items {
+  .link-items__item_text {
+    text-transform: capitalize;
+  }
+}
+
+.subcategory-page {
+  .choose-infero__img-3 {
+    @media all and (max-width: 992px) {
+      margin: -20px auto 0;
+
+    }
+    @media all and (max-width: 576px) {
+      height: 110px;
+      width: 100%;
+    }
+  }
+}
+
+.slider-clients {
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+[data-more] {
+  height: 215px;
+  transition: height .3s linear;
+  @media all and (max-width: 576px) {
+    height: 265px;
+  }
+
+  &.active {
+    height: auto;
+  }
+
+  + button {
+    margin-left: 20px;
+  }
+}
+
+.light-beige {
+  background-color: #fef9f1 !important;
+}
+
+.main-page-subcategory {
+  .about-subcategory__text {
+    padding: 20px 0;
+    p {
+      a {
+        text-decoration: underline;
+        color: var(--red);
+      }
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    ul:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  //.choose-infero__text {
+  //  font-size: 32px;
+  //  line-height: 36px;
+  //}
+
+  .global-accordion-page__item_header h4 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .slider-clients h2, .about-subcategory__text h2, .testimonials__swiper h2, .faq h2, .link-items h2, .red-info__item h2 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .faq h2 {
+    margin-bottom: 20px;
+  }
+
+  .faq__wrapper .accordion {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .link-items h2 {
+    margin-bottom: 36px;
+  }
+  .testimonials, .slider-clients , .faq, .link-items.features{
+    padding: 36px 0;
+  }
+  .faq__wrapper{
+    row-gap: 10px;
+  }
+  .faq__wrapper .accordion {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .testimonials__swiper h2 {
+
+    + .swiper {
+      margin-top: 0;
+
+      .swiper-slide {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .global-accordion-page__item_body {
+    .description {
+      ul {
+        list-style: disc outside;
+        padding-left: 20px;
+      }
+    }
+  }
+
+}

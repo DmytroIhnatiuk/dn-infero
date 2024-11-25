@@ -92,11 +92,11 @@
 		span {
 			width: 0;
 			height: 0;
-			border-left: 15px solid transparent;
-			border-right: 15px solid transparent;
-			border-top: 15px solid #333;
+			border-left: .1rem solid transparent;
+			border-right: .1rem solid transparent;
+			border-top: .1rem solid #333;
 			transition: transform 0.35s linear;
-			margin-left: 24px;
+			margin-left: .24rem;
 			@media all and (min-width: 1024px) {
 				display: none;
 			}

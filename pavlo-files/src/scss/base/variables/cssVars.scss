@@ -1,0 +1,13 @@
+
+//@import "typography";
+@import "colors";
+:root {
+
+  --container-gap: 54px;
+
+  @media all and (max-width: 576px) {
+    --container-gap: 16px;
+
+  }
+
+}

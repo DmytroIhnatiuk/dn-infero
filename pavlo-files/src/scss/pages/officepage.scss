@@ -1,0 +1,203 @@
+.choose-infero-office {
+  padding: 85px 60px 20px;
+  min-height: 485px;
+
+
+  .choose-infero__text {
+    margin-top: 20px;
+
+    ul {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    padding: 40px var(--container-gap) 20px;
+    width: 100%;
+    .flex.--just-between {
+      flex-direction: column;
+    }
+    .choose-infero__text {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  @media all and (max-width: 576px) {
+    min-height: auto;
+  }
+}
+
+.slider-office {
+
+  color: #fff;
+  position: relative;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 100px;
+    height: 100%;
+
+    &.red {
+      background: #C14312;
+    }
+
+    &.grey {
+      background: rgb(51, 51, 51);
+    }
+
+    @media screen and (max-width: 990px) {
+      padding: 20px 20px;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      padding:  10px;
+    }
+
+    h4 {
+      font-family: $DM-Sans-font;
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 40px;
+      margin-right: 0;
+
+      @media screen and (max-width: 768px) {
+        font-size: 20px;
+        text-align: center;
+        line-height: 30px;
+      }
+    }
+
+    a, button {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20.83px;
+      border: 1px solid #fff;
+      padding: 12px 24px;
+      transition: all 0.3s;
+      white-space: nowrap;
+
+      &:hover {
+        background-color: #db1515;
+      }
+    }
+  }
+
+
+}
+
+.products {
+  padding: 85px 0 35px;
+  @media all and (max-width: 992px) {
+    padding-top: 50px;
+  }
+  @media all and (max-width: 576px) {
+    padding: 35px 0 20px;
+  }
+
+
+  &__text {
+    text-align: center;
+    margin-bottom: 45px;
+
+
+    h2 {
+      font-family: $DM-Sans-font;
+      font-size: 50px;
+      font-weight: 500;
+      line-height: 64px;
+      margin-bottom: 20px;
+
+      @media screen and (max-width: 992px) {
+        font-size: 32px;
+        line-height: 48px;
+      }
+
+
+    }
+
+    p {
+      width: 70%;
+      margin: 0 auto;
+      font-family: $DM-Sans-font;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+
+      @media screen and (max-width: 992px) {
+        font-size: 16px;
+        line-height: 20px;
+        width: 100%;
+      }
+
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 100px;
+
+    @media screen and (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+
+    }
+    @media all and (max-width: 576px) {
+      grid-template-columns: 1fr;
+    }
+
+
+  }
+
+  &__item {
+    height: 100%;
+    font-size: 16px;
+    font-weight: 400;
+
+    &-img {
+      width: size(72, 52);
+      height: size(72, 52);
+
+    }
+
+    h3 {
+
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 32px;
+      color: #000;
+      margin-bottom: 20px;
+
+    }
+
+    p {
+
+
+      color: #000000;
+      margin-bottom: 32px;
+    }
+
+    .item-link {
+
+      margin-top: auto;
+      border: 1px solid #333333;
+      width: 100%;
+      padding: 0 20px;
+      transition: all 0.3s;
+      height: 44px;
+
+      &:hover {
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+}
+
+.choose-infero__text-shop {
+  p {
+    margin-bottom: 10px;
+  }
+}

@@ -14,11 +14,6 @@ function conditionsSlider() {
 			640: {
 				slidesPerView: 2,
 			},
-			1024: {
-				slidesPerView: 4,
-				autoplay: false,
-				loop: false,
-			},
 		},
 	})
 }

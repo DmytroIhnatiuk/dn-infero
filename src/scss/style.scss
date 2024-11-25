@@ -7,29 +7,74 @@
 @import 'components';
 
 .dn-promo-video {
-	&:hover {
-		button {
-			svg {
-				fill: #c14312;
-			}
-		}
-	}
+  &:hover {
+    button {
+      svg {
+        fill: #c14312;
+      }
+    }
+  }
 }
+
 .dn-bread-crumbs {
-	a {
-		&:last-child {
-			margin-right: 0;
-			&::before {
-				content: '';
-			}
-		}
-		&::before {
-			content: '>';
-			position: absolute;
-			right: -0.2rem;
-		}
-		&.active {
-			pointer-events: none;
-		}
-	}
+  li {
+    &:last-child {
+      margin-right: 0;
+
+      &::before {
+        content: '';
+      }
+    }
+
+    &::before {
+      content: '>';
+      position: absolute;
+      right: -0.2rem;
+    }
+
+    &.active {
+      pointer-events: none;
+    }
+  }
+}
+
+[data-swiper="conditionsSlider"] {
+  .swiper-wrapper {
+    .swiper-slide {
+      display: flex;
+    }
+
+    @media all and (min-width: 1024px) {
+      justify-content: space-between;
+      .swiper-slide {
+        width: auto;
+        flex-shrink: 1;
+      }
+    }
+    @media all and (max-width: 992px) {
+      .swiper-slide {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.dn-product-description {
+  ul {
+    margin-bottom: .24rem;
+    padding-left: .04rem;
+    list-style: disc inside;
+
+    li {
+      margin-bottom: .08rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &::marker {
+        color: #C14312
+      }
+    }
+  }
 }
