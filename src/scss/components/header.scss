@@ -33,46 +33,6 @@
 					}
 				}
 			}
-
-			.btn_red {
-				height: 45px;
-				min-height: 45px;
-				background: #c14312;
-				color: #fff;
-				font-size: 18px;
-				position: relative;
-				margin: 0 25px;
-				&::before {
-					content: '';
-					position: absolute;
-					top: 0;
-					right: 0;
-					bottom: 0;
-					left: 0;
-					transition: background 0.35s linear;
-					background: #9d0128;
-				}
-				span {
-					position: relative;
-					z-index: 10;
-				}
-				@media all and (min-width: 640px) {
-					margin: 0 auto;
-					width: auto;
-					min-width: 20%;
-					max-width: 360px;
-					font-size: 18px;
-				}
-				@media all and (min-width: 1024px) {
-					margin: 0;
-					font-size: 18px;
-					&:hover {
-						&::before {
-							background: transparent;
-						}
-					}
-				}
-			}
 		}
 	}
 	&__container {
@@ -93,11 +53,11 @@
 		span {
 			width: 0;
 			height: 0;
-			border-left: .1rem solid transparent;
-			border-right: .1rem solid transparent;
-			border-top: .1rem solid #333;
+			border-left: 0.1rem solid transparent;
+			border-right: 0.1rem solid transparent;
+			border-top: 0.1rem solid #333;
 			transition: transform 0.35s linear;
-			margin-left: .24rem;
+			margin-left: 0.24rem;
 			@media all and (min-width: 1024px) {
 				display: none;
 			}

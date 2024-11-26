@@ -3,12 +3,12 @@ window['FLS'] = true
 import '../scss/style.scss'
 import accordion from './modules/accordion.js'
 import * as flsFunctions from './core/functions.js'
-import {scrollToAnchor} from './modules/scrollToAnchor.js'
-import {headerFixed} from './modules/index.js'
+import { scrollToAnchor } from './modules/scrollToAnchor.js'
+import { headerFixed } from './modules/index.js'
 import burger from './modules/burger.js'
 import HeaderComponent from './modules/HeaderComponent.js'
 import 'swiper/css'
-import {conditionsSlider} from './modules/sliders.js'
+import { conditionsSlider } from './modules/sliders.js'
 
 /* Перевірка підтримки webp, додавання класу webp або no-webp для HTML */
 /* (i) необхідно для коректного відображення webp із css */
@@ -27,27 +27,32 @@ flsFunctions.fullVHfix()
 // Сніппет(HTML):
 // import './files/scroll/lazyload.js';
 function initAccordionOnSmallScreens() {
-    if (window.innerWidth < 1024) {
-        accordion('.dn-accordion', '.dn-accordion-header', '.dn-accordion-content')
-    }
+	if (window.innerWidth < 1024) {
+		accordion('.dn-accordion', '.dn-accordion-header', '.dn-accordion-content')
+	}
 }
+accordion(
+	'.dn-accordion-faqs',
+	'.dn-accordion-faqs__header',
+	'.dn-accordion-faqs__content'
+)
 
 initAccordionOnSmallScreens()
 window.addEventListener('resize', () => {
-    document.querySelectorAll('.dn-accordion-content').forEach(content => {
-        content.style.maxHeight = null
-    })
-    initAccordionOnSmallScreens()
+	document.querySelectorAll('.dn-accordion-content').forEach(content => {
+		content.style.maxHeight = null
+	})
+	initAccordionOnSmallScreens()
 })
 
 window.addEventListener('DOMContentLoaded', () => {
-    try {
-        if (window.innerWidth < 1024) {
-            conditionsSlider();
-        }
-        scrollToAnchor()
-        burger()
-    } catch (e) {
-        console.log(e)
-    }
+	try {
+		if (window.innerWidth < 1024) {
+			conditionsSlider()
+		}
+		scrollToAnchor()
+		burger()
+	} catch (e) {
+		console.log(e)
+	}
 })

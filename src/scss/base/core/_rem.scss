@@ -48,11 +48,11 @@
 // @include remBreakpoint(768, 0); // tablet
 // @include remBreakpoint(480, 0); // mobile
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 1023.9px) {
 	@include remBase(768, 0);
 }
 
-@media all and (max-width: 640px) {
+@media all and (max-width: 639.9px) {
 	@include remBase(375, 0);
 }
 
