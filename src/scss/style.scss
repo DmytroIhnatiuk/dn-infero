@@ -1,5 +1,5 @@
 @use 'sass:math';
-//@import 'tailwind';
+@import 'tailwind';
 @import 'base';
 @import 'fonts';
 @import 'global';
@@ -120,5 +120,11 @@
     p, h2, h3, h4, h5 {
       margin-bottom: .12rem;
     }
+  }
+}
+
+.dn-benefits {
+  p, h2, h3, h4, h5 {
+    margin-bottom: .12rem;
   }
 }

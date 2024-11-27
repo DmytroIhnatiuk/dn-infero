@@ -9,27 +9,27 @@
 // Do not use rems for borders!
 
 @mixin remBase($widthDesign, $heightDesign) {
-	html {
-		font-size: calc($gem-coeff * 100 / $widthDesign) + vw;
-	}
+  html {
+    font-size: calc($gem-coeff * 100 / $widthDesign) + vw;
+  }
 
-	// html {
-	//     #{$gem}: calc(100vw / #{$widthDesign});
-	// }
+  // html {
+  //     #{$gem}: calc(100vw / #{$widthDesign});
+  // }
 
-	@if $heightDesign != 0 {
-		@media all and (min-aspect-ratio: #{$widthDesign} / #{$heightDesign}) {
-			html {
-				font-size: calc(100vh / #{$heightDesign});
-			}
-		}
-	}
+  @if $heightDesign != 0 {
+    @media all and (min-aspect-ratio: #{$widthDesign} / #{$heightDesign}) {
+      html {
+        font-size: calc(100vh / #{$heightDesign});
+      }
+    }
+  }
 }
 
 @mixin remBreakpoint($widthDesign, $heightDesign, $query: 'max-width') {
-	@media all and (#{$query}: #{$widthDesign}px) {
-		@include remBase($widthDesign, $heightDesign);
-	}
+  @media all and (#{$query}: #{$widthDesign}px) {
+    @include remBase($widthDesign, $heightDesign);
+  }
 }
 
 // This defines base breakpoint, that will be used by default.
@@ -40,21 +40,34 @@
 //TODO change breackpoint before realize
 // @include remBase(1280, 0);
 
-@include remBase(1920, 0);
+//@include remBase(1920, 0);
 
 // Usually, base breakpoint is for desktop, so other (smaller) bps are specified via 'max-width' media query
 
 // @include remBreakpoint(1024, 0); // tablet landscape
 // @include remBreakpoint(768, 0); // tablet
 // @include remBreakpoint(480, 0); // mobile
+//
+@include remBase(1440, 0);
+@media all and (max-width: 1024px) {
 
-@media all and (max-width: 1023.9px) {
-	@include remBase(768, 0);
 }
 
-@media all and (max-width: 639.9px) {
-	@include remBase(375, 0);
+@media all and (max-width: 992px) {
+  @include remBase(768, 0);
 }
 
-// @include remBreakpoint(1900, 0, 'min-width'); // hd
+@media all and (max-width: 576px) {
+  @include remBase(375, 0);
+}
+
+//@media all and (max-width: 1023.9px) {
+//	@include remBase(768, 0);
+//}
+//
+//@media all and (max-width: 639.9px) {
+//	@include remBase(375, 0);
+//}
+
+ @include remBreakpoint(1900, 0, 'min-width'); // hd
 @include remBreakpoint(2561, 1200, 'min-width'); // 4k displays
