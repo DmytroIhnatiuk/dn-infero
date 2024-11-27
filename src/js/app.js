@@ -1,5 +1,6 @@
 window['FLS'] = true
 // Підключення основного файлу стилів
+// import '../scss/tailwind/index.scss'
 import '../scss/style.scss'
 import accordion from './modules/accordion.js'
 import * as flsFunctions from './core/functions.js'
@@ -7,7 +8,7 @@ import { scrollToAnchor } from './modules/scrollToAnchor.js'
 import { headerFixed } from './modules/index.js'
 import burger from './modules/burger.js'
 import HeaderComponent from './modules/HeaderComponent.js'
-import 'swiper/css'
+// import 'swiper/css'
 import { conditionsSlider } from './modules/sliders.js'
 
 /* Перевірка підтримки webp, додавання класу webp або no-webp для HTML */
@@ -31,13 +32,7 @@ function initAccordionOnSmallScreens() {
 		accordion('.dn-accordion', '.dn-accordion-header', '.dn-accordion-content')
 	}
 }
-accordion(
-	'.dn-accordion-faqs',
-	'.dn-accordion-faqs__header',
-	'.dn-accordion-faqs__content'
-)
 
-initAccordionOnSmallScreens()
 window.addEventListener('resize', () => {
 	document.querySelectorAll('.dn-accordion-content').forEach(content => {
 		content.style.maxHeight = null
@@ -52,6 +47,13 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 		scrollToAnchor()
 		burger()
+		accordion(
+			'.dn-accordion-faqs',
+			'.dn-accordion-faqs__header',
+			'.dn-accordion-faqs__content'
+		)
+
+		initAccordionOnSmallScreens()
 	} catch (e) {
 		console.log(e)
 	}
