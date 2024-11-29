@@ -4,11 +4,11 @@ window['FLS'] = true
 import '../scss/style.scss'
 import accordion from './modules/accordion.js'
 import * as flsFunctions from './core/functions.js'
-import {scrollToAnchor} from './modules/scrollToAnchor.js'
+import { scrollToAnchor } from './modules/scrollToAnchor.js'
 import burger from './modules/burger.js'
 
 import 'swiper/css'
-import {conditionsSlider} from './modules/sliders.js'
+import { conditionsSlider, dnClientsSlider } from './modules/sliders.js'
 
 /* Перевірка підтримки webp, додавання класу webp або no-webp для HTML */
 /* (i) необхідно для коректного відображення webp із css */
@@ -27,33 +27,34 @@ flsFunctions.fullVHfix()
 // Сніппет(HTML):
 // import './files/scroll/lazyload.js';
 function initAccordionOnSmallScreens() {
-    if (window.innerWidth < 1024) {
-        accordion('.dn-accordion', '.dn-accordion-header', '.dn-accordion-content')
-    }
+	if (window.innerWidth < 1024) {
+		accordion('.dn-accordion', '.dn-accordion-header', '.dn-accordion-content')
+	}
 }
 
 window.addEventListener('resize', () => {
-    document.querySelectorAll('.dn-accordion-content').forEach(content => {
-        content.style.maxHeight = null
-    })
-    initAccordionOnSmallScreens()
+	document.querySelectorAll('.dn-accordion-content').forEach(content => {
+		content.style.maxHeight = null
+	})
+	initAccordionOnSmallScreens()
 })
 
 window.addEventListener('DOMContentLoaded', () => {
-    try {
-        if (window.innerWidth < 1024) {
-            conditionsSlider()
-        }
-        scrollToAnchor()
-        burger()
-        accordion(
-            '.dn-accordion-faqs',
-            '.dn-accordion-faqs__header',
-            '.dn-accordion-faqs__content'
-        )
+	try {
+		if (window.innerWidth < 1024) {
+			conditionsSlider()
+		}
+		dnClientsSlider()
+		scrollToAnchor()
+		burger()
+		accordion(
+			'.dn-accordion-faqs',
+			'.dn-accordion-faqs__header',
+			'.dn-accordion-faqs__content'
+		)
 
-        initAccordionOnSmallScreens()
-    } catch (e) {
-        console.log(e)
-    }
+		initAccordionOnSmallScreens()
+	} catch (e) {
+		console.log(e)
+	}
 })
