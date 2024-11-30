@@ -7,8 +7,12 @@ import * as flsFunctions from './core/functions.js'
 import {scrollToAnchor} from './modules/scrollToAnchor.js'
 import burger from './modules/burger.js'
 
-// import 'swiper/css'
-import { conditionsSlider, dnClientsSlider } from './modules/sliders.js'
+import 'swiper/css'
+import {
+	conditionsSlider,
+	dnClientsSlider,
+	dnReviewsSlider,
+} from './modules/sliders.js'
 
 /* Перевірка підтримки webp, додавання класу webp або no-webp для HTML */
 /* (i) необхідно для коректного відображення webp із css */
@@ -45,6 +49,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			conditionsSlider()
 		}
 		dnClientsSlider()
+		dnReviewsSlider()
 		scrollToAnchor()
 		burger()
 		accordion(

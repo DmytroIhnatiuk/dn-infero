@@ -40,5 +40,24 @@ function dnClientsSlider() {
 		},
 	})
 }
+function dnReviewsSlider() {
+	if (!getElement('[data-swiper="dnReviewsSlider"]')) return
+	new Swiper('[data-swiper="dnReviewsSlider"]', {
+		slidesPerView: 1,
+		loop: true,
+		autoplay: true,
+		spaceBetween: 32,
+		breakpoints: {
+			640: {
+				slidesPerView: 2,
+				spaceBetween: 32,
+			},
+			1024: {
+				slidesPerView: 3,
+				spaceBetween: 140,
+			},
+		},
+	})
+}
 
-export { conditionsSlider, dnClientsSlider }
+export { conditionsSlider, dnClientsSlider, dnReviewsSlider }
