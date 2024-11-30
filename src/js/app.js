@@ -7,7 +7,7 @@ import * as flsFunctions from './core/functions.js'
 import {scrollToAnchor} from './modules/scrollToAnchor.js'
 import burger from './modules/burger.js'
 
-import 'swiper/css'
+// import 'swiper/css'
 import { conditionsSlider, dnClientsSlider } from './modules/sliders.js'
 
 /* Перевірка підтримки webp, додавання класу webp або no-webp для HTML */

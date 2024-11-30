@@ -142,12 +142,16 @@
   }
 }
 
-.testimonials {
+.link-items.features, .testimonials {
   padding: .4rem 0;
 
   .container {
     padding: 0 calc(15px + 205 * (100vw - 320px) / 1600);
   }
+}
+
+.testimonials {
+
 
   .testimonials__swiper .swiper {
     margin-bottom: 0;
