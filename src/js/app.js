@@ -1,13 +1,13 @@
 window['FLS'] = true
 // Підключення основного файлу стилів
-// import '../scss/tailwind/index.scss'
-import '../scss/style.scss'
+import '../scss/tailwind/index.scss'
+// import '../scss/style.scss'
 import accordion from './modules/accordion.js'
 import * as flsFunctions from './core/functions.js'
 import {scrollToAnchor} from './modules/scrollToAnchor.js'
 import burger from './modules/burger.js'
 
-import 'swiper/css'
+// import 'swiper/css'
 import {
 	conditionsSlider,
 	dnClientsSlider,
