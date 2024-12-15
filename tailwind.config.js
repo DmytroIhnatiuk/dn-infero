@@ -33,6 +33,9 @@ module.exports = {
 			'dn-accent': '#9D0128',
 			white: '#fff',
 		},
+		boxShadow: {
+			custom: '5px 5px 5px 0px rgba(145, 145, 145, 0.26)',
+		},
 	},
 	plugins: [],
 }
