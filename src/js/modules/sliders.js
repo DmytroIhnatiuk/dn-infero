@@ -54,7 +54,7 @@ function dnReviewsSlider() {
 			},
 			1024: {
 				slidesPerView: 3,
-				spaceBetween: 140,
+				spaceBetween: 40,
 			},
 		},
 	})

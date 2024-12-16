@@ -201,12 +201,14 @@
 									>Power BI</a
 								>
 							</div>
+							<div class="mb-16 lg:mb-24 lg:last:mb-0 md:line-clamp-2 gap-20 lg:gap-40"></div>
+							<div class="size-[.3rem] mr-16 min-w-[.3rem] min-h-[.3rem]"></div>
 							<div
-								class="lg:px-[.85rem] sm:px-[.35rem] py-[.4rem] grid grid-cols-1 lg:grid-cols-2 gap-x-[.68rem] gap-y-[.55rem]"
+								class="lg:px-[.85rem] sm:px-[.35rem] py-[.4rem] grid grid-cols-1 lg:grid-cols-2 gap-x-[.68rem] gap-y-[.55rem]  gap-[.4rem] mr-[.05rem]"
 							>
-								<div class="border border-solid border-[#707070]">
+								<div class="mr-[.2rem]  mt-16 max-w-[8.47rem] mx-auto border border-solid border-[#707070]">
 									<div
-										class="flex grow p-[.2rem] lg:p-[.3rem] border-b border-solid border-[#707070]"
+										class="flex pt-[.4rem] mr-[.2rem] grow p-[.2rem] lg:p-[.3rem] border-b border-solid border-[#707070]"
 									>
 										<div
 											class="image size-[.5rem] sm:size-[.62rem] shrink-0 mr-[.15rem] sm:mr-[0.6rem]"
@@ -1287,8 +1289,9 @@
 							<div
 								class="sm:max-w-[1.35rem] mb-36 sm:mb-0 flex sm:flex-col items-center"
 							>
+								<div class="w-[2rem] h-[.68rem] !md:mr-0  md:mr-0  !sm:text-[.24rem] !text-[.22rem]"></div>
 								<div
-									class="size-100 min-w-100 flex items-end sm:mb-40 mr-24 sm:mr-0 flex-shrink"
+									class="size-[.5rem] sm:min-w-[1rem] sm:min-h-[1rem] sm:size-[1rem]  flex items-end sm:mb-40 mr-24 sm:mr-0 flex-shrink-0"
 								>
 									<svg class="size-full fill-white">
 										<use href="#train-icon"></use>
@@ -1353,6 +1356,38 @@
 								<div class="text-[.24rem] sm:text-center font-[700]">
 									Accreditations & Partners
 								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="py-[.4rem] bg-[#F7F2FA]">
+					<div class="dn-container">
+						<div class="image w-[2.54rem] h-[1.4rem] mx-auto">
+							<img src="<?= get_img_link('google-logo.webp') ?>" alt="google logo"/>
+						</div>
+						<h2 class="h1 font-[500] text-center mb-40 sm:mb-50">
+							What our customers Say
+						</h2>
+						<div class="swiper" data-swiper="dnReviewsSlider">
+							<div class="swiper-wrapper">
+								<?php foreach ($google_reviews_section['reviews_repeater'] as $review): ?>
+								<div class="swiper-slide">
+									<div class="font-[500] flex flex-col">
+										<div class="h-26 w-[1.53rem] mb-24">
+											<svg class="size-full">
+												<use href="#stars-icon"></use>
+											</svg>
+										</div>
+										<div class="mb-24 italic">
+											<?= $review['text'] ?>
+
+										</div>
+										<div class="text-[.22rem] font-[700] justify-self-end">
+											<?= $review['author'] ?>
+										</div>
+									</div>
+								</div>
+								<?php endforeach; ?>
 							</div>
 						</div>
 					</div>
