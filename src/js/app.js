@@ -63,3 +63,25 @@ window.addEventListener('DOMContentLoaded', () => {
 		console.log(e)
 	}
 })
+
+const dropdownBtn = document.getElementById('dropdownBtn')
+const dropdownContent = document.getElementById('dropdownContent')
+const dropdownList = document.getElementById('dropdownList')
+const dropdownSelected = document.getElementById('dropdownSelected')
+
+dropdownBtn.addEventListener('click', () => {
+	dropdownContent.classList.toggle('hidden')
+})
+
+dropdownList.querySelectorAll('li').forEach(item => {
+	item.addEventListener('click', () => {
+		dropdownSelected.textContent = item.textContent
+		dropdownContent.classList.add('hidden')
+	})
+})
+
+document.addEventListener('click', e => {
+	if (!dropdownBtn.contains(e.target) && !dropdownContent.contains(e.target)) {
+		dropdownContent.classList.add('hidden')
+	}
+})

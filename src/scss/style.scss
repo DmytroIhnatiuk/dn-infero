@@ -132,3 +132,24 @@
 		margin-bottom: 0.12rem;
 	}
 }
+@media all and (min-width: 1024px) {
+	.custom__dropdown {
+		&:hover {
+			.dropdown__content {
+				display: block !important;
+			}
+		}
+	}
+}
+
+@media all and (min-width: 1024px) {
+	.cours-tablet {
+		div {
+			&:first-child {
+				.tablet-header {
+					display: block !important;
+				}
+			}
+		}
+	}
+}
