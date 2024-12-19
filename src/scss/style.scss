@@ -17,7 +17,7 @@
 }
 
 .dn-bread-crumbs {
-	a {
+	li{
 		&:last-child {
 			margin-right: 0;
 			pointer-events: none;
